@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#Create a pair of ssh rsa keys 
+ssh-keygen -t rsa -b 4096 -f school -N "betty" 

@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 #Creates a 404 page
+sudo apt update
+sudo apt install nginx -y
 echo "Ceci n'est pas une page" | sudo tee /var/www/html/404.html
 sudo sed -i '/listen 80 default_server;/a\
         error_page 404 /404.html;' /etc/nginx/sites-available/default

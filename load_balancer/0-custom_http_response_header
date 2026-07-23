@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
 #Track which server is handling my request
+sudo apt update
+sudo apt install nginx -y
 sudo sed -i '/server_name _;/a\ add_header X-Served-By $hostname;' /etc/nginx/sites-available/default
 sudo service nginx restart
